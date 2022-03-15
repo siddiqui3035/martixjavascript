@@ -1,21 +1,21 @@
-"use script";
+"use strict";
 const main = () => {
     let
     canvas = document.querySelector('canvas'),
     context = canvas.getContext('2d'),
     w = window.innerWidth,
     h = window.innerHeight,
-    fontSize = 16,
-    columns = Math.floor(w/ fontSize),
+    fontSize = 20,
+    columns = Math.floor(w / fontSize),
     drops = [],
     str = 'JavaScript Matrix Effect',
 
     matrix = () => {
-        context.fillStyle = 'rgba(0,0,55,05)';
+        context.fillStyle = 'rgba(0,0,55,.05)';
         context.fillRect(0,0,w,h);
         context.fontSize = `650 ${fontSize}px`;
         context.fillStyle = '#ff0';
-        for (let i=0; i<columns; i++){
+        for (let i=0; i < columns; i++){
             let
             j = Math.floor(Math.random()*str.length),
             x = i*fontSize,
